@@ -8,7 +8,7 @@ const PlayAgainBtn = gameModel.querySelector(".play-again");
 
 
 let currentWord,correctLetters=[], wrongGuessCount;
-const maxGuesses =  3;
+const maxGuesses =  6;
 const resetGame = () =>{
   //Reseting all game variables  and UI elements
   correctLetters = [];
