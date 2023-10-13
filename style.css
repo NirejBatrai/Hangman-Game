@@ -90,8 +90,13 @@ body {
     padding: 7px;
     width: calc(100% / 9 - 5px);
 }
+.keyboard button[disabled]{
+  opacity:0.6;
+  pointer-events: none;
+
+}
 :where(.Game-model, .keyboard) button:hover{
-    background-color:#be89d6 ;
+    
 }
 .Game-model{
     position: fixed;
@@ -99,10 +104,22 @@ body {
     top:0;
     width: 100%;
     height: 100%;
+    opacity:0 ;
+    padding: 0 10px;
+    pointer-events: none;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color:rgba(0,0,0,0.6) ;
+    transition: opacity 0.45 ease;
+
+}
+.Game-model.show{
+  opacity: 1;
+  pointer-events: auto;
+  
+
 }
 .Game-model .content{
     background: white;
@@ -142,10 +159,10 @@ body {
         padding: 30px 15px;
         align-items: center;
     }
-    .hangman-box img {
+    .Hangman-box img {
         max-width: 200px;
     }
-    .hangman-box h1 {
+    .Hangman-box h1 {
         display: none;
     }
 }
