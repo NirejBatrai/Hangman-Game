@@ -13,7 +13,7 @@ body {
   justify-content: center;
   padding: 0 10px;
   min-height: 100vh;
-  background-color:black;
+  background-color:rgb(134, 91, 212);
 }
 .container {
   width: 850px;
@@ -96,6 +96,7 @@ body {
 
 }
 :where(.Game-model, .keyboard) button:hover{
+
     
 }
 .Game-model{

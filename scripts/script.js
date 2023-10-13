@@ -8,7 +8,7 @@ const PlayAgainBtn = gameModel.querySelector(".play-again");
 
 
 let currentWord,correctLetters=[], wrongGuessCount;
-const maxGuesses =  6;
+const maxGuesses =  3;
 const resetGame = () =>{
   //Reseting all game variables  and UI elements
   correctLetters = [];
@@ -20,6 +20,7 @@ const resetGame = () =>{
   gameModel.classList.remove("show");
 
 }
+
 const getRandomWord = () => {
     //Selecting a random word and hint from the wordlist
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
@@ -46,6 +47,7 @@ setTimeout(() => {
   gameModel.classList.add("show");
 }, 300);
 };
+
 
 const initGame = (button, clickedLetter) => {
   // Checking if clickedLetter is exist on the currentWord
